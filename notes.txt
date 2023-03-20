@@ -1,0 +1,27 @@
+Last seen- chapter -3 dropped at 1.34.47
+
+Last seen- chapter 4 dropped at 2.13
+- Inline css of jsx
+
+npm init 
+npm init -y (will skip the process of creating)
+
+npm is short cut for npm run 
+
+cmd 
+npx parcel index.html
+
+npx parcel build index.html
+
+babel plugin transform runtime remove console
+
+dev dependency (it is needed in the dev env)
+dependency (it is needed for the app)
+polyfil - converts the latest es6 code js into browser compacatable js code
+
+Parcel (advantages)
+===============
+Hot module replacing
+cacheing
+optimization(image,JS minifiies,cleaning)
+Tree shaking

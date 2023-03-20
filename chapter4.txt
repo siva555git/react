@@ -1,0 +1,95 @@
+Functional compoment
+eg:
+const Title  = () =>{ return (<h1 id="title1" key="h2">
+    Learn new Method </h1>)};
+React element
+eg:
+const heading2 = (<h1 id="title" key="h1">
+    Learn new</h1>);
+
+
+
+Is JSX mandatory - no
+Is typescript mandatory - no
+even es6 mandatory - no
+
+
+Eg to write js codes inside {}
+
+const HeaderComp = () => {
+    return (
+        <div>
+            {console.log(xyz)} 
+            {heading2}
+            {Title()}
+            <h2>React component</h2>
+            <h2>This is h2 tag</h2>
+            </div>);
+};
+
+
+
+high level design
+const appLayout = () => {
+    return (
+        {
+            /**
+             * Header
+             *  - Logo
+             *  - Nav items
+             *  = card
+             * Body
+             *  - search bar
+             *  - Restro list
+             *    - Restro card
+             *      - Image
+             *      - Name
+             *      - Rating
+             *      - cusine
+             * Footer
+             *  - Links 
+             *  - copyright
+             */
+        }
+    )
+}
+
+
+Any pieace of jsx written only one parant should be there
+
+eg:
+ const jsx  = <div><h1></h1><h2></h2></div>
+
+Not this
+ const jsx  = <h1></h1><h2></h2>
+
+ React.fragment can also write as <> </> is used to remove div instead
+
+
+ JSX have one only parent
+
+ JSX have two ways
+ className
+ styleobject
+
+ H.W // Can we react.fragment inside the react.fragment ?
+
+ config driven UI
+
+ optional chaining
+
+ H.W // dif b/w foreach and map
+
+ what is virutal dom
+
+ It is representation of actual dom
+
+ why we need virutal dom in react
+
+ // alg Reconsilation
+
+ react fiber 
+ new Reconsilation engine
+
+ Why we not use loop index as key
+

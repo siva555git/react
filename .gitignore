@@ -1,0 +1,4 @@
+# node nmodules
+node_modules/
+dist/
+.parcel-cache/
