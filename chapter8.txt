@@ -1,0 +1,23 @@
+10 to 18 mins revision
+
+
+wtihout render class should not be there
+
+why we do super(props) in react
+
+we do not mutate state directly
+like 
+this.state.count = 2
+
+how setState works
+
+Last seen 1:21
+
+
+callback async is not called in useEffects
+
+
+can use async in the class compounddidmount
+
+
+re render cycle known as updating

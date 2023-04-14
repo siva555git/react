@@ -5,9 +5,13 @@
     border: 1px solid black;
 }
 .Restaurant {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-flow: wrap;
+	justify-content: center;
+	place-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
 }
 
 .nav-items > ul {
@@ -24,8 +28,85 @@
 }
 
 .Resto {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+    width: 20%;
+	min-width: 290px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	flex-flow: column wrap;
+	justify-items: center;
+	margin: 1rem;
+	padding: 1rem;
+	display: flex;
+	transition: all 1s ease;
     
+}
+
+.Restaurant .Resto a {
+	text-decoration: none;
+	color: #333333;
+}
+
+.Restaurant .Resto img {
+	display: block;
+    width: 100%;
+	border: 1px solid #ccc;
+	box-shadow: 5px 7px 7px #ccc;
+}
+
+.shimmer-container .lines {
+	height: 35px;
+	width: 100%;
+	margin-top: 25px;
+}
+
+.shimmer-container .photo {
+	display: block !important;
+	width: 100%;
+	height: 220px;
+}
+
+.shimmer-container .shine {
+	background: #f6f7f8;
+	background-image: linear-gradient(
+		to right,
+		#f6f7f8 0%,
+		#edeef1 20%,
+		#f6f7f8 40%,
+		#f6f7f8 100%
+	);
+	background-repeat: no-repeat;
+	background-size: 800px 220px;
+	display: inline-block;
+	position: relative;
+
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-name: placeholderShimmer;
+	-webkit-animation-timing-function: linear;
+}
+
+/* Shimmer effect CSS */
+.shimmer-effect {
+	flex-flow: wrap;
+	justify-content: center;
+	place-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+.shimmer-container {
+	width: 20%;
+	min-width: 290px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	flex-flow: column wrap;
+	justify-items: center;
+	margin: 1rem;
+	padding: 1rem;
+	display: flex;
+	transition: all 1s ease;
+	height: 400px;
 }
