@@ -25,6 +25,7 @@ import Body from "./components/body";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Error from "./components/error";
+import Profile from "./components/profile";
 import {
     createBrowserRouter,
     Outlet,
@@ -144,6 +145,12 @@ const router = createBrowserRouter([
             {
                 path: "/about_us",
                 element: <About />,
+                children:[
+                    {
+                        path: "profile", //if you add '/' in front of profile will consider localhost:1234/profile
+                        element: <Profile />,
+                    },
+                ]
             },
             {
                 path: "/contact_us",
