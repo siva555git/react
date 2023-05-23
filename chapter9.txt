@@ -1,0 +1,48 @@
+Creating custom hooks
+
+
+readablelity
+reuseableity
+testabality
+modularlity
+
+
+1:49 about local storage    
+
+// dyncmaic bundling
+// lazy loading
+// code splitting
+// on demand loading
+2:00
+
+never load lazy in another compoment
+
+from 2:40 revision
+
+Chapter 10
+
+who maintain material UI
+
+post css
+
+what theme and content are using in tailwind init
+
+last seen 2:00
+
+-- square bracket notation for some specfic value in css
+
+
+Pros and cors
+
+- easy to debug
+- code is less
+- lots more control
+- new way writting css
+- we can do it in the js file
+
+
+cors
+- too much of class
+- 
+
+revise 2:50

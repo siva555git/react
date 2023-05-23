@@ -1,0 +1,75 @@
+- props drilling
+    taking the state value into n level of the component
+
+
+React dev tools
+ - debug tool to easy for debuging
+
+
+ lefting the state up
+
+
+ Chapter 12
+ =============
+
+ we can have many slice in store
+
+ dispatch the action -> it call function (Reducer) that will modify the slice 
+
+ we cannot directly modify the slice
+
+ that function we are using is called Reducer
+
+============
+
+when click on the button
+
+. Dispatch the action it calls the reducer function it updates the slice of the store
+
+
+Selector (selecting portion of the store called slice)
+========
+
+- It will read the data from slice which is in the store and update the UI where we want
+
+- selector is also a hook 
+
+- when ever slice modified the UI automatcally changed becasue it is subscribe to the slice of the store
+
+- UI  is subscribe to slice using selector
+
+
+react-redux
+
+bridge b/w react and redux
+
+
+redux-toolkit
+
+used to maintain the store
+
+1.47 is revise the rkt config
+
+
+/**
+Create store 
+
+- use configureStoe - rkt
+
+Use the store in the app
+
+- import provider from the react-redux
+- import the store for the provider 
+
+
+middleware
+RTK
+
+redux devtools -> extension
+
+
+last seen 2:16
+
+
+
+ 

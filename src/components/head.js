@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import logo from "../assets/logo.jpg";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
+import UserContext from "../utils/userContext";
 
 export const Title  = () =>{ 
     return <a href="/" className="logo"><img alt="logo" width="100" height="100" src={logo}/></a>
@@ -9,19 +11,23 @@ export const Title  = () =>{
 
 export const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const isOnline = useOnline();
+    const {user} = useContext(UserContext);
     return (
-        <div className="header">
+        <div className="p-5 m-5 justify-between flex shadow-lg bg-orange-300">
             <Title/>
-            <div className="nav-items">
-            <ul>
-                <li>Home</li>
+            <div className="mt-3">
+            <ul className="flex p-3 m-3 space-x-8">
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/about_us">About us</Link></li>
                 <li><Link to="/contact_us">Contact us</Link></li>
+                <li><Link to="/instamart">Instamart</Link></li>
             </ul>
             </div>
-            <button onClick={() => {
+            <button className="p-3 m-0" onClick={() => {
                 setIsLoggedIn(!isLoggedIn);
-            }}>{isLoggedIn ? "Login" : "Logout"}</button>
+            }}><span>{user?.name}</span><span>{isOnline ? "Online": "Offline"}</span> {isLoggedIn ? "Login" : "Logout"}</button>
+            
         </div>
     )
 }

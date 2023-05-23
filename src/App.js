@@ -18,7 +18,7 @@
  * Tree shaking Removing unwanted 
  */
 
-import { createElement as cs } from "react";
+import { createElement as cs, lazy, Suspense, useState } from "react";
 import  ReactDOM  from "react-dom/client";
 import {Header} from "./components/head";
 import Body from "./components/body";
@@ -26,6 +26,8 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Error from "./components/error";
 import Profile from "./components/profile";
+import Shimmer from "./components/shimmer";
+import UserContext from "./utils/userContext";
 import {
     createBrowserRouter,
     Outlet,
@@ -115,7 +117,9 @@ const headerCompNew = () => {
 };
 
 
+//const about = lazy(() => import("./components/About"));
 
+const Instamart = lazy(() => import("./components/instamart"));
 
 
 const Footer = () => {
@@ -123,11 +127,18 @@ const Footer = () => {
 }
 
 const AppLayout = () => {
+
+    const [user, setUser] = useState({
+        name: "siva",
+        email: "siva@gmail.com"
+    });
     return (
         <>
+            <UserContext.Provider value={{user, setUser}}>
             <Header/>
             <Outlet/>
             <Footer/>
+            </UserContext.Provider>
         </>
     )
 }
@@ -159,6 +170,10 @@ const router = createBrowserRouter([
             {
                 path: "/restaurant/:id",
                 element: <RestMenu />,
+            },
+            {
+                path: "/instamart",
+                element: <Suspense fallback={<Shimmer/>} ><Instamart /></Suspense>,
             }
         ]
     }

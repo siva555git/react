@@ -1,4 +1,7 @@
-.header {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* .header {
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -87,7 +90,7 @@
 }
 
 /* Shimmer effect CSS */
-.shimmer-effect {
+/*.shimmer-effect {
 	flex-flow: wrap;
 	justify-content: center;
 	place-items: center;
@@ -109,4 +112,4 @@
 	display: flex;
 	transition: all 1s ease;
 	height: 400px;
-}
+} */
