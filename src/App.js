@@ -27,6 +27,7 @@ import Contact from "./components/contact";
 import Error from "./components/error";
 import Profile from "./components/profile";
 import Shimmer from "./components/shimmer";
+import Cart from "./components/cart";
 import UserContext from "./utils/userContext";
 import {
     createBrowserRouter,
@@ -34,6 +35,8 @@ import {
     RouterProvider,
   } from "react-router-dom";
 import RestMenu from "./components/restmenu";
+import { Provider } from "react-redux";
+import Store from "./utils/store";
 
 
 
@@ -134,11 +137,13 @@ const AppLayout = () => {
     });
     return (
         <>
+        <Provider store={Store}>
             <UserContext.Provider value={{user, setUser}}>
             <Header/>
             <Outlet/>
             <Footer/>
             </UserContext.Provider>
+        </Provider>
         </>
     )
 }
@@ -166,6 +171,10 @@ const router = createBrowserRouter([
             {
                 path: "/contact_us",
                 element: <Contact />,
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
             },
             {
                 path: "/restaurant/:id",

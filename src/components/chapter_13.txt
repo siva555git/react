@@ -1,0 +1,83 @@
+E2E testing
+Headless browser 
+ - kind of browser without UI 
+ - will they virtual 
+
+
+Unit testing 
+Integration testing => Integration b/w the components
+smoke testing
+regression testing
+
+
+JEST 
+====
+ javascript testing framework
+
+Step 1 => install below two items
+
+ Testing library react
+ JEST
+
+Step 2  -> configure jest using $ npx jest --init
+- do you need tS - no
+- choose the env for the testing - jsdon
+- do you wnat code coverage - yest
+- which provide you need - babel
+- automaticaly clear mocks, instances,contexts  - yes
+
+Step 3 -> run the test $ npm run test
+
+  (If dependency error)
+  step 1 -> install jest-envirnoment-jsdom package $npm i -D jest-envirnoment-jsdom
+
+Step 4 -> create test folder __tests__ in components
+ note-> jest libray check for testing files in __tests__ folder or else it will check .test.js or .spec.js suffix files in any folders
+
+Step 5 ->  eg with sum function
+
+Step 6 -> found err with import so need to configure babel\
+then install and configure babel (babel.config or babelrc) from office docs of jest
+
+D/W JS objects & JSON
+
+
+Step 4 -> wrote except for sum and ignore the /coverage in .gitignore
+
+Step 5 -> create testcase for header file
+  step 1 -> render the header using testing-library/react
+  step 2 -> code not understanding JSX . So add preset for react in babel
+  step 3 -> breaking in logo (doest understanding the png). So create the dummy image
+  step 4 -> configure the jest file to take png image for dummy image (moduleNameMapper in jest file)
+  step 5 -> breaking the redux provider, So add the provider and store to fix that 
+  step 6 -> breaking in the router for <Link>. So import staticRouter  from react-router-dom/server
+  since it is not running the browser. we should not use the usual one which is using in the code instead we using this  
+  step 7 -> now it is passed. But we didn't expect as of now
+  step 8 -> add test id for the logo
+  step 9-> start testing for online status create new test for that (add id for that tag and call getByTestid method)
+  step 10 -> add testing for cart simliar to the above test items
+
+Step 6 -> create testcase for search text
+   step 1 -> repeat the steps for same provide for header like (render, provider, router, store)
+   step 2 -> overcome for the error the fetch  since it is not in jest containers
+   step 3 -> mock for the fetch
+   step 4 -> create mock data for restaurant data
+   step 5 -> facing error for shimmer.
+   step 6 -> for continuous test run we add watch-test in script of package
+   step 7 -> for testing shimmer tobeindocument for that add another library
+   step 8 -> then we check the rest list length
+   step 9 -> added async to wait for some await item
+   step 9 -> then search item using fireevent to click the button
+
+
+Step 7 -> create testcase for cart items 
+  step 1 -> simliar to search for the food item
+  step 2 -> fireevent of click for cart item
+  
+
+
+last seen 3:31:44
+
+
+
+

@@ -2,6 +2,32 @@ export const IMG_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,
 
 export const SWIGGY_MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.895165020665033&lng=79.80382584035397&restaurantId=";
 
+export const MOCK_MENU = [{
+  "id": 1,
+  "name":"idly",
+  "price": 10,
+  "description": "very soft for eating",
+  "imageId":"agzrvnlwlqmf4vbtqmko"
+}, {
+  "id": 1,
+  "name":"Dosa",
+  "price": 50,
+  "description": "very soft for eating",
+  "imageId":"vwdqvnphlftdcsijmyzk"
+}, {
+  "id": 1,
+  "name":"Poori",
+  "price": 70,
+  "description": "very soft for eating",
+  "imageId":"edeukgtzwkggisxz4wql"
+},{
+  "id": 1,
+  "name":"Vada PAV",
+  "price": 20,
+  "description": "very soft for eating",
+  "imageId":"yaodkaufrj14oupitjgb"
+}];
+
 export const RestaurantList = [
     {
         "type": "restaurant",
